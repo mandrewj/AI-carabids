@@ -21,7 +21,7 @@ def parse_url(url):
     from tensorflow.keras.models import load_model
     from datetime import date
     #update this path to the desired model
-	model = load_model(os.path.join('models','five_species.tf'))
+    model = load_model(os.path.join('models','five_species.tf'))
 	#re-read image in, resize it per model expectations
     img = cv2.imread(file_name)
     resize = tf.image.resize(img, (400, 600))

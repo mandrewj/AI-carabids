@@ -19,7 +19,7 @@ if ($url != 0) {
 	echo json_encode( $data );
 	}
 else{
-	echo 'No URL submitted.';
+	echo 'No URL submitted.\n';
 	echo 'Usage: 5sp.php?url=path/to/image.jpg';
 	}
 
