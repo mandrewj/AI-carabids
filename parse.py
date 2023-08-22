@@ -48,8 +48,8 @@ def parse_url(url):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 1:
-        print("Usage: python parse.py <url>")
+    if len(sys.argv) != 2:
+        print("Usage: python3 parse.py <url>")
         sys.exit(1)
     
     imgurl = sys.argv[1]
