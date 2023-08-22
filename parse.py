@@ -2,6 +2,8 @@
 import sys, requests, shutil, json, os
 from PIL import Image
 print("This is working!!")
+print(sys.argv)
+print(len(sys.argv))
 file_name="temp-img"
 
 def parse_url(url):
