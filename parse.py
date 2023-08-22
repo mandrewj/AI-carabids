@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import sys, requests, shutil, json, os
 from PIL import Image
-
+print("This is working!!")
 file_name="temp-img"
 
 def parse_url(url):
@@ -53,13 +53,13 @@ if __name__ == "__main__":
     imgurl = sys.argv[1]
     res = requests.get(imgurl, stream = True)
     if res.status_code != 200:
-    	return("Url seems invalid")
+    	print("Url seems invalid")
     	sys.exit(1)
     with open(file_name, 'wb') as f:
     	shutil.copyfileobj(res.raw, f)
     img = Image.open(file_name)
     if img.format.lower() not in ['jpg', 'jpeg']:
-    	return("Image not in jpg format")
+    	print("Image not in jpg format")
     	sys.exit(1)
     
     parsed_result = parse_url(imgurl)
