@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 $url = array_key_exists('url',$_REQUEST)?$_REQUEST['url']:0;
 // Check if the "url" REQUEST variable is set
 if ($url != 0) {
