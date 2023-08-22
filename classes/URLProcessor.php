@@ -10,9 +10,10 @@ class URLProcessor {
         $command = "python3 $pythonScript " . $sanitizedUrl;
         print $command ;
         $output = shell_exec($command);
+        print $output;
 
         // Return the output
-        header('Content-Type: application/json');
+        //header('Content-Type: application/json');
         return $output;
     }
 }
