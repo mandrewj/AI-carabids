@@ -24,4 +24,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     	echo 'Usage: 5sp.php?url=path/to/image.jpg';
     	}
     }
-    ?>
+else{
+	echo 'Usage: 5sp.php?url=path/to/image.jpg';}
+?>
