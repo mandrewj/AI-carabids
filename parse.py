@@ -51,6 +51,10 @@ if __name__ == "__main__":
         sys.exit(1)
     
     imgurl = sys.argv[1]
+    res = requests.get(imgurl, stream = True)
+    if res.status_code != 200:
+    	print("Url seems invalid")
+    	sys.exit(1)
     with open(file_name, 'wb') as f:
     	shutil.copyfileobj(res.raw, f)
     img = Image.open(file_name)
