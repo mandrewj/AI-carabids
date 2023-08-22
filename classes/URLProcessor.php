@@ -14,7 +14,7 @@ class URLProcessor {
         $retval=null;
         exec($command, $output, $retval);
         echo "Returned with status $retval and output:\n";
-        print_r($output)
+        print_r($output);
         print "output ran";
 
         // Return the output
