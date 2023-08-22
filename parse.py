@@ -47,19 +47,19 @@ def parse_url(url):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: python parse.py <url>")
+        return("Usage: python parse.py <url>")
         sys.exit(1)
     
     imgurl = sys.argv[1]
     res = requests.get(imgurl, stream = True)
     if res.status_code != 200:
-    	print("Url seems invalid")
+    	return("Url seems invalid")
     	sys.exit(1)
     with open(file_name, 'wb') as f:
     	shutil.copyfileobj(res.raw, f)
     img = Image.open(file_name)
     if img.format.lower() not in ['jpg', 'jpeg']:
-    	print("Image not in jpg format")
+    	return("Image not in jpg format")
     	sys.exit(1)
     
     parsed_result = parse_url(imgurl)
