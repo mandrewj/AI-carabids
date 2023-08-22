@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["url"])) {
         // Get the submitted URL
         $submittedUrl = $_POST["url"];
-        
+        echo $submittedUrl;
         // Include the class file
         require_once "classes/URLProcessor.php";
 
