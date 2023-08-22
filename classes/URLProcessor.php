@@ -7,7 +7,7 @@ class URLProcessor {
 
         // Execute the Python script and get the output
         $pythonScript = 'parse.py';
-        $command = "python3 $pythonScript " . escapeshellarg($sanitizedUrl);
+        $command = "python3 $pythonScript " . $sanitizedUrl;
         print $command ;
         $output = shell_exec($command);
 
