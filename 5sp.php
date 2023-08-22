@@ -2,7 +2,7 @@
 // Check if the form has been submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if the "url" POST variable is set
-    if (isset($_POST["url"])) {
+    if (isset($_GET["url"])) {
         // Get the submitted URL
         $submittedUrl = $_POST["url"];
         echo $submittedUrl;
@@ -25,5 +25,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     	}
     }
 else{
+	echo 'no get statements given';
 	echo 'Usage: 5sp.php?url=path/to/image.jpg';}
 ?>
