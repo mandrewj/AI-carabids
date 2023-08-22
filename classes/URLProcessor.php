@@ -9,13 +9,8 @@ class URLProcessor {
         $pythonScript = 'parse.py';
         $command = "python3 $pythonScript " . escapeshellcmd($sanitizedUrl);
         print $command ;
-        //$output = shell_exec($command);
-        $output=null;
-        $retval=null;
-        exec($command, $output, $retval);
-        echo "Returned with status $retval and output:\n";
-        print_r($output);
-        print "output ran";
+        $output = shell_exec($command);
+                print "output ran";
 
         // Return the output
         //header('Content-Type: application/json');
