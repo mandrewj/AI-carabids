@@ -53,7 +53,7 @@ def parse_url(url):
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     x = json.dumps(dwc_det)
     log_entry1 = f"[{timestamp}] Prediction from image {url}\n"
-    log_entry2 = f"[{timestamp}] {y_prob}\n"
+    log_entry2 = f"[{timestamp}] Probability array {y_prob}\n"
     log_entry3 = f"[{timestamp}] {x}\n"
     with open(log_file, "a") as lf:
     	lf.write(log_entry1)
