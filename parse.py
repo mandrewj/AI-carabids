@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import sys, requests, shutil, json, os
-from PIL import Image
+import Image
 print("This is working!!")
 print(sys.argv)
 print(len(sys.argv))
