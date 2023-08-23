@@ -18,11 +18,9 @@ if ($url != 0) {
 	$detoutput = $urlProcessor->processURL($submittedUrl);
 
 	// Output the processed URL
-	$json = file_get_contents($detoutput);
-	$json_data = json_decode($json,true);
-	
 	header('Content-type: application/json');
-	echo json_encode($json_data, JSON_PRETTY_PRINT);
+	include($detoutput);
+	
 	}
 else{
 	echo 'No URL submitted.\n';

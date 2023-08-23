@@ -44,7 +44,7 @@ def parse_url(url):
         }
     json_file=os.path.join(path,'data.json')
     with open(json_file, 'w') as f:
-    	json.dump(dwc_det, f)
+    	json.dump(dwc_det, f, indent=4)
     return(json_file)
     
 
