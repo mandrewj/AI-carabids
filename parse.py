@@ -1,5 +1,5 @@
 import sys, requests, shutil, json, os
-from django import Image
+#from PIL import Image
 print("This is working!!")
 print(sys.argv)
 print(len(sys.argv))
@@ -58,10 +58,10 @@ if __name__ == "__main__":
     	sys.exit(1)
     with open(file_name, 'wb') as f:
     	shutil.copyfileobj(res.raw, f)
-    img = Image.open(file_name)
-    if img.format.lower() not in ['jpg', 'jpeg']:
-    	print("Image not in jpg format")
-    	sys.exit(1)
+#    img = Image.open(file_name)
+#    if img.format.lower() not in ['jpg', 'jpeg']:
+#    	print("Image not in jpg format")
+#    	sys.exit(1)
     
     parsed_result = parse_url(imgurl)
     print(parsed_result)
