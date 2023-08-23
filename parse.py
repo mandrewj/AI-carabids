@@ -42,7 +42,7 @@ def parse_url(url):
             "identificationReferences" : "ID used the five_species carabid model",
             "identificationRemarks" : f'Model probability is {y_prob[0][y_prob.argmax()]}'
         }
-    json_file=os.path.join(path.'data.json')
+    json_file=os.path.join(path,'data.json')
     with open(json_file, 'w') as f:
     	json.dump(dwc_det, f)
     return(json_file)
