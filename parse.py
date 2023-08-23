@@ -1,8 +1,8 @@
 import sys, requests, shutil, json, os
 #import Image
-print("This is working!!")
-print(sys.argv)
-print(len(sys.argv))
+#print("This is working!!")
+#print(sys.argv)
+#print(len(sys.argv))
 path = "/var/www/html/AI-carabids"
 file_name="/var/www/html/AI-carabids/temp-img"
 
