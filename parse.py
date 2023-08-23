@@ -3,7 +3,7 @@ import sys, requests, shutil, json, os
 print("This is working!!")
 print(sys.argv)
 print(len(sys.argv))
-file_name="temp-img"
+file_name="/var/www/html/AI-carabids/temp-img"
 
 def parse_url(url):
     # Perform your URL parsing logic here
@@ -22,7 +22,7 @@ def parse_url(url):
     from tensorflow.keras.models import load_model
     from datetime import date
     #update this path to the desired model
-    model = load_model(os.path.join('models','five_species.tf'))
+    model = load_model(os.path.join('var','www','http','AI-carabids','models','five_species.tf'))
 	#re-read image in, resize it per model expectations
     img = cv2.imread(file_name)
     resize = tf.image.resize(img, (400, 600))
