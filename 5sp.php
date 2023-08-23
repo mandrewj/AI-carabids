@@ -7,7 +7,7 @@ $url = array_key_exists('url',$_REQUEST)?$_REQUEST['url']:0;
 if ($url != 0) {
 	// Get the submitted URL
 	$submittedUrl = $_REQUEST["url"];
-	echo $submittedUrl;
+	#echo $submittedUrl;
 	// Include the class file
 	require_once "classes/URLProcessor.php";
 
