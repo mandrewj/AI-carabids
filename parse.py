@@ -42,7 +42,10 @@ def parse_url(url):
             "identificationReferences" : "ID used the five_species carabid model",
             "identificationRemarks" : f'Model probability is {y_prob[0][y_prob.argmax()]}'
         }
-    return(json.dumps(dwc_det))
+    json_file=os.path.join(path.'data.json')
+    with open(json_file, 'w') as f:
+    	json.dump(dwc_det, f)
+    return(json_file)
     
 
 
@@ -66,4 +69,4 @@ if __name__ == "__main__":
     
     parsed_result = parse_url(imgurl)
     raw_result = "%r"%parsed_result
-    print("%r"%parsed_result, end='')
+    print(raw_result, end='')
