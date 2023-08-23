@@ -52,9 +52,13 @@ def parse_url(url):
     log_file = os.path.join(path,'logs','5sp.log')
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     x = json.dumps(dwc_det)
-    log_entry = f"[{timestamp}] {x}\n"
+    log_entry1 = f"[{timestamp}] Prediction from image {url}\n"
+    log_entry2 = f"[{timestamp}] {y_prob}\n"
+    log_entry3 = f"[{timestamp}] {x}\n"
     with open(log_file, "a") as lf:
-    	lf.write(log_entry)
+    	lf.write(log_entry1)
+    	lf.write(log_entry2)
+    	lf.write(log_entry3)
     #return filename to finish script
     return(json_file)
     
