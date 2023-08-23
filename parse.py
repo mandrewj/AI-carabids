@@ -42,7 +42,7 @@ def parse_url(url):
             "identifiedBy" : "AI model for carabids by M.A. Johnston",
             "dateIdentified" : datetime.date.today().strftime("%Y-%m-%d"),
             "identificationReferences" : "ID used the five_species carabid model",
-            "identificationRemarks" : f'Model probability is {y_prob[0][y_prob.argmax()]}'
+            "identificationRemarks" : f'Model probability is {str(round(y_prob[0][y_prob.argmax()],5))}'
         }
     #write JSON file to return
     json_file=os.path.join(path,'data.json')
