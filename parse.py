@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 import sys, requests, shutil, json, os
 import Image
 print("This is working!!")
