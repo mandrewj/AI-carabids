@@ -42,7 +42,7 @@ def parse_url(url):
             "identificationReferences" : "ID used the five_species carabid model",
             "identificationRemarks" : f'Model probability is {y_prob[0][y_prob.argmax()]}'
         }
-    return(json.dumps(dwc_det, indent=2))
+    return(json.dumps(dwc_det)
     
 
 
