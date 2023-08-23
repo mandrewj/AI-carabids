@@ -19,7 +19,8 @@ if ($url != 0) {
 
 	// Output the processed URL
 	header('Content-type: application/json');
-	include($detoutput);
+	
+	include(str_replace("'","",$detoutput);
 	
 	}
 else{
