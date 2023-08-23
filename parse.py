@@ -65,4 +65,5 @@ if __name__ == "__main__":
 #    	sys.exit(1)
     
     parsed_result = parse_url(imgurl)
-    print(parsed_result)
+    raw_result = "%r"%parsed_result
+    print("%r"%parsed_result, end='')
