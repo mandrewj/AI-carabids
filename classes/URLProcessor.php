@@ -7,7 +7,7 @@ class URLProcessor {
 
         // Execute the Python script and get the output
         $pythonScript = '/var/www/html/AI-carabids/parse.py';
-        $command = "/usr/bin/python3 $pythonScript " . escapeshellcmd($sanitizedUrl) . " 2>$1";
+        $command = "/usr/bin/python3 $pythonScript " . escapeshellcmd($sanitizedUrl) . " 2>&1";
         print $command;
         $output = shell_exec($command);
         print "output ran";
