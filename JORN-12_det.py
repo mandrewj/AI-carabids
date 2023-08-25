@@ -31,7 +31,7 @@ def parse_url(url):
     y_prob = model.predict(np.expand_dims(resize/255, 0), verbose=0)
     y_classes = y_prob.argmax(axis=-1)
     #define class names - could make this programmatic in the future
-    classes=('PASCAL','OMUDEJ','PASELO','PTELAM','SCASUB')
+    classes=('NF-PASCAL', 'CHLSER', 'NF-PASELO', 'JUNLEM', 'NF-OMUDEJ', 'CALPER2', 'NF-PTELAM', 'CYMPUN2', 'CICPUN', 'NF-SCASUB2', 'DISROB', 'CHLTOM')
     #write output to log file
     log_file = os.path.join(path,'logs','5sp.log')
     #Create output and print it
