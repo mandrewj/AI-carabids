@@ -49,7 +49,7 @@ def parse_url(url):
     with open(json_file, 'w') as f:
     	json.dump(dwc_det, f, indent=4)
     #write output to log file
-    log_file = os.path.join(path,'logs','5sp.log')
+    log_file = os.path.join(path,'logs','5light.log')
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     x = json.dumps(dwc_det)
     log_entry1 = f"[{timestamp}] Prediction from image {url}\n"
