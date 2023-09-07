@@ -15,7 +15,7 @@ if ($url != 0) {
 	$urlProcessor = new URLProcessor();
 	
 	//set desired python script (for the correct model)
-	$pythonScript = '/var/www/html/AI-carabids/JORN-12_det.py';
+	$pythonScript = '/var/www/html/AI-carabids/JORN-14_det.py';
 
 	// Process the submitted URL
 	$detoutput = $urlProcessor->processURL($submittedUrl, $pythonScript);
@@ -28,7 +28,7 @@ if ($url != 0) {
 	}
 else{
 	echo 'No URL submitted.\n';
-	echo 'Usage: jorn12.php?url=path/to/image.jpg';
+	echo 'Usage: jorn14.php?url=path/to/image.jpg';
 	}
 
 ?>
